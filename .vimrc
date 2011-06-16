@@ -36,15 +36,12 @@ set completeopt=menu
 set nonumber
 set laststatus=2
 set ruler
-set listchars=tab:▶━,trail:█,extends:▶,precedes:◀
+set listchars=tab:▶━,trail:⌴,extends:▶,precedes:◀
+
 "set list
 "set pumheight=5
 
-if &t_Co > 255
-	colorscheme molokai
-else
-	colorscheme default
-endif
+colorscheme molokai
 
 syn on
 
@@ -98,14 +95,14 @@ autocmd BufNewFile,BufRead *.css,*.less set filetype=css
 
 "-----------------------------------------------------------------[HAML]----
 autocmd BufNewFile,BufRead *.haml set filetype=haml
-autocmd FileType haml set noexpandtab
-autocmd FileType haml set shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType haml set expandtab
+autocmd FileType haml set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType haml set makeprg=haml\ %:p\ %:p:s?haml?html?
 
 "-----------------------------------------------------------------[SASS]----
 autocmd BufNewFile,BufRead *.sass set filetype=sass
 autocmd FileType sass set noexpandtab
-autocmd FileType sass set shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType sass set shiftwidth=2 tabstop=2 softtabstop=2
 
 "-----------------------------------------------------------[JavaScript]----
 autocmd BufNewFile,BufRead *.js set filetype=javascript
@@ -114,6 +111,8 @@ autocmd FileType javascript set nocindent autoindent smartindent noexpandtab
 
 "---------------------------------------------------------[Coffeescript]----
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
+autocmd FileType coffee set expandtab
+autocmd FileType coffee set shiftwidth=2 tabstop=2 softtabstop=2
 
 "-----------------------------------------------------------------[Ruby]----
 "make -> ruby -c
