@@ -28,5 +28,6 @@ get_bundle tpope vim-git
 get_bundle tpope vim-haml
 get_bundle tpope vim-markdown
 get_bundle tomasr molokai
+get_bundle wavded vim-stylus
 
 vim -c 'call pathogen#helptags()|q'
