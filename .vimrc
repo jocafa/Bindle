@@ -89,7 +89,7 @@ map L $
 autocmd BufNewFile,BufRead *.htm,*.html set filetype=html.css.javascript
 
 "------------------------------------------------------------------[CSS]----
-autocmd BufNewFile,BufRead *.css,*.less,*.styl set filetype=css
+autocmd BufNewFile,BufRead *.css,*.less set filetype=css
 
 "-----------------------------------------------------------------[YAML]----
 
@@ -142,7 +142,7 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 "-------------------------------------------------------------[Markdown]----
 autocmd BufNewFile,BufRead *.md,*.mkd,*.markdown set filetype=markdown
-autocmd FileType markdown set wrap linebreak
+autocmd FileType markdown set wrap linebreak expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 "---------------------------------------------------------[ Processing ]----
 autocmd BufNewFile,BufRead *.pde set filetype=java expandtab shiftwidth=2 tabstop=2 softtabstop=2

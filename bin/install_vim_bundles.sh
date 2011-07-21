@@ -29,5 +29,6 @@ get_bundle tpope vim-haml
 get_bundle tpope vim-markdown
 get_bundle tomasr molokai
 get_bundle wavded vim-stylus
+get_bundle vim-scripts actionscript.vim--Jethani
 
 vim -c 'call pathogen#helptags()|q'
