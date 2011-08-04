@@ -87,6 +87,8 @@ map L $
 
 "-----------------------------------------------------------------[HTML]----
 autocmd BufNewFile,BufRead *.htm,*.html set filetype=html.css.javascript
+autocmd FileType html.css.javascript set expandtab
+autocmd FileType html.css.javascript set shiftwidth=2 tabstop=2 softtabstop=2
 
 "------------------------------------------------------------------[CSS]----
 autocmd BufNewFile,BufRead *.css,*.less set filetype=css
