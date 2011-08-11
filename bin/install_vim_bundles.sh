@@ -17,7 +17,7 @@ get_bundle leshill vim-json
 get_bundle duff vim-bufonly
 get_bundle kchmck vim-coffee-script
 get_bundle mileszs ack.vim
-get_bundle pangloss vim-javascript
+#get_bundle pangloss vim-javascript
 get_bundle mattn zencoding-vim
 get_bundle ervandew supertab
 get_bundle msanders snipmate.vim
@@ -28,7 +28,8 @@ get_bundle tpope vim-git
 get_bundle tpope vim-haml
 get_bundle tpope vim-markdown
 get_bundle wavded vim-stylus
-get_bundle vim-scripts actionscript.vim--Jethani
+get_bundle vim-scripts JavaScript-Indent
+#get_bundle vim-scripts actionscript.vim--Jethani
 
 #colorschemes
 get_bundle vim-scripts eclm_wombat.vim
@@ -39,6 +40,7 @@ get_bundle vim-scripts pyte
 get_bundle vim-scripts silent.vim
 get_bundle vim-scripts TuttiColori-Colorscheme
 get_bundle vim-scripts Warm-grey
+get_bundle vim-scripts vanzan_color
 get_bundle tomasr molokai
 
 vim -c 'call pathogen#helptags()|q'

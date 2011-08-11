@@ -87,7 +87,7 @@ map L $
 
 "-----------------------------------------------------------------[HTML]----
 autocmd BufNewFile,BufRead *.htm,*.html set filetype=html.css.javascript
-autocmd FileType html.css.javascript set expandtab
+autocmd FileType html.css.javascript set expandtab nocindent autoindent smartindent
 autocmd FileType html.css.javascript set shiftwidth=2 tabstop=2 softtabstop=2
 
 "------------------------------------------------------------------[CSS]----
@@ -108,8 +108,8 @@ autocmd FileType sass set shiftwidth=2 tabstop=2 softtabstop=2
 
 "-----------------------------------------------------------[JavaScript]----
 autocmd BufNewFile,BufRead *.js set filetype=javascript
-autocmd FileType javascript set shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType javascript set nocindent autoindent smartindent noexpandtab
+"autocmd FileType javascript set shiftwidth=2 tabstop=2 softtabstop=2
+"autocmd FileType javascript set nocindent autoindent smartindent noexpandtab
 
 "---------------------------------------------------------[Coffeescript]----
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
