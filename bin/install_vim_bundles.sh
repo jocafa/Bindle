@@ -30,6 +30,7 @@ get_bundle tpope vim-haml
 get_bundle tpope vim-markdown
 get_bundle wavded vim-stylus
 get_bundle vim-scripts JavaScript-Indent
+get_bundle jboyens vim-protobuf
 #get_bundle vim-scripts actionscript.vim--Jethani
 
 #colorschemes

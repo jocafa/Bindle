@@ -80,6 +80,8 @@ map k gk
 map H ^
 map L $
 
+map gf :e <cfile><CR>
+
 "---------------------------------------------------------------------------
 "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%[File Types]%%%%
 "---------------------------------------------------------------------------
@@ -110,6 +112,8 @@ autocmd FileType sass set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd BufNewFile,BufRead *.js set filetype=javascript
 autocmd FileType javascript set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript set nocindent autoindent smartindent noexpandtab
+autocmd FileType javascript ab FF function
+autocmd FileType javascript ab TT this
 
 "---------------------------------------------------------[Coffeescript]----
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
@@ -148,3 +152,6 @@ autocmd FileType markdown set wrap linebreak expandtab shiftwidth=2 tabstop=2 so
 
 "---------------------------------------------------------[ Processing ]----
 autocmd BufNewFile,BufRead *.pde set filetype=java expandtab shiftwidth=2 tabstop=2 softtabstop=2
+
+"-----------------------------------------------------------[ Protobuf ]----
+autocmd BufNewFile,BufRead *.proto set filetype=proto
