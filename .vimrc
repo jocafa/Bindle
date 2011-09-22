@@ -109,11 +109,24 @@ autocmd FileType sass set noexpandtab
 autocmd FileType sass set shiftwidth=2 tabstop=2 softtabstop=2
 
 "-----------------------------------------------------------[JavaScript]----
+function! JsLint(startline, endline)
+	let input = join(getline(a:startline, a:endline), "\n")
+	if !len(input)
+		return
+	endif
+	let output = system('jsl -conf ~/.jsl.conf -nologo -stdin 2>&1', input)
+	echo output
+endfunction
+
 autocmd BufNewFile,BufRead *.js set filetype=javascript
 autocmd FileType javascript set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript set nocindent autoindent smartindent noexpandtab
-autocmd FileType javascript ab FF function
-autocmd FileType javascript ab TT this
+autocmd FileType javascript set concealcursor=nvi
+autocmd FileType javascript ab ƒ function
+autocmd FileType javascript ab µ this
+autocmd FileType javascript command! -range=%
+			\ JsLint call JsLint(<line1>, <line2>)
+
 
 "---------------------------------------------------------[Coffeescript]----
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
