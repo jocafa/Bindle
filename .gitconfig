@@ -1,0 +1,34 @@
+[user]
+	name = Josh Faul
+	email = josh.faul@gmail.com
+
+[core]
+	editor = mvim
+
+[branch]
+	autosetuprebase = remote
+
+[merge]
+	tool = opendiff
+
+[color]
+	ui = auto
+
+[alias]
+	st = status
+	di = diff
+	co = checkout
+	ci = commit
+	cia = commit -a
+	cam = commit -am
+	br = branch
+	sta = stash
+	ls = ls-remote .
+	pu = push
+	pom = push origin master
+	logp = log --prety='%h - %s'
+	unstage = reset HEAD --
+	softrm = rm --cached --
+	last = log -1 HEAD
+	mine = !git log --author=`git config user.email`
+	difforigin = diff origin/master --name-only
