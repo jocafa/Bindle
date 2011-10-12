@@ -5,7 +5,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="jocafa"
+#ZSH_THEME="jocafa"
+ZSH_THEME="jreese"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -29,10 +30,12 @@ plugins=(git brew node npm vi-mode taskwarrior)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/jfaul/Scripts:/usr/local/sbin:$PATH:/usr/local/CrossPack-AVR/bin
+#export PATH=/Users/jfaul/Scripts:/usr/local/sbin:$PATH:/usr/local/CrossPack-AVR/bin
+export PATH=/Users/jfaul/Scripts:/usr/local/sbin:$PATH
 export EDITOR=vim
 source $HOME/.rvm/scripts/rvm
-#source $HOME/.nvm/nvm.sh
+source $HOME/.nvm/nvm.sh
+export NODE_PATH=/usr/local/lib/node_modules
 
 alias jslint="jsl -conf ~/.jsl.conf -process"
 alias phantomjs="/Applications/phantomjs.app/Contents/MacOS/phantomjs"

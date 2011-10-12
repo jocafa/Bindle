@@ -28,6 +28,7 @@ get_bundle scrooloose nerdtree
 get_bundle tpope vim-git
 get_bundle tpope vim-haml
 get_bundle tpope vim-markdown
+get_bundle tpope vim-fugitive
 get_bundle wavded vim-stylus
 get_bundle vim-scripts JavaScript-Indent
 get_bundle jboyens vim-protobuf
@@ -44,5 +45,6 @@ get_bundle vim-scripts TuttiColori-Colorscheme
 get_bundle vim-scripts Warm-grey
 get_bundle vim-scripts vanzan_color
 get_bundle tomasr molokai
+get_bundle altercation vim-colors-solarized
 
 vim -c 'call pathogen#helptags()|q'
