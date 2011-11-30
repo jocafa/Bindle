@@ -42,8 +42,8 @@ set listchars=tab:▶━,trail:⌴,extends:▶,precedes:◀
 "set list
 "set pumheight=5
 
-"colorscheme molokai
 colorscheme solarized
+set bg=light
 
 syn on
 
@@ -84,6 +84,9 @@ map L $
 
 map gf :e <cfile><CR>
 
+"---------------------------------------------------------------[Keymap]----
+set keymap=jocafa
+
 "---------------------------------------------------------------------------
 "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%[File Types]%%%%
 "---------------------------------------------------------------------------
@@ -91,8 +94,8 @@ map gf :e <cfile><CR>
 
 "-----------------------------------------------------------------[HTML]----
 autocmd BufNewFile,BufRead *.htm,*.html set filetype=html.css.javascript
-autocmd FileType html.css.javascript set noexpandtab nocindent autoindent smartindent
-autocmd FileType html.css.javascript set shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType html.css.javascript set expandtab nocindent autoindent smartindent
+autocmd FileType html.css.javascript set shiftwidth=2 tabstop=2 softtabstop=2
 
 "------------------------------------------------------------------[CSS]----
 autocmd BufNewFile,BufRead *.css,*.less set filetype=css
@@ -121,8 +124,8 @@ function! JsLint(startline, endline)
 endfunction
 
 autocmd BufNewFile,BufRead *.js set filetype=javascript
-autocmd FileType javascript set shiftwidth=4 tabstop=4 softtabstop=4
-autocmd FileType javascript set nocindent autoindent smartindent noexpandtab
+autocmd FileType javascript set shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType javascript set nocindent autoindent smartindent expandtab
 "autocmd FileType javascript set concealcursor=nvi
 "autocmd FileType javascript ab ƒ function
 "autocmd FileType javascript ab µ this

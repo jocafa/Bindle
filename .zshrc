@@ -34,8 +34,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/Users/jfaul/Scripts:/usr/local/sbin:$PATH
 export EDITOR=vim
 source $HOME/.rvm/scripts/rvm
-source $HOME/.nvm/nvm.sh
-export NODE_PATH=/usr/local/lib/node_modules
+#export NODE_PATH=/usr/local/lib/node_modules
 
 alias jslint="jsl -conf ~/.jsl.conf -process"
 alias phantomjs="/Applications/phantomjs.app/Contents/MacOS/phantomjs"
