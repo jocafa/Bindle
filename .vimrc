@@ -39,6 +39,9 @@ set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set listchars=tab:▶━,trail:⌴,extends:▶,precedes:◀
 
+set splitbelow
+set splitright
+
 "set list
 "set pumheight=5
 
