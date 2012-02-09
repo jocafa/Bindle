@@ -29,6 +29,7 @@ get_bundle tpope vim-git
 get_bundle tpope vim-haml
 get_bundle tpope vim-markdown
 get_bundle tpope vim-fugitive
+get_bundle digitaltoad vim-jade
 get_bundle wavded vim-stylus
 get_bundle vim-scripts JavaScript-Indent
 get_bundle jboyens vim-protobuf
