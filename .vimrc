@@ -32,6 +32,8 @@ set lazyredraw
 set complete=.,w,k,b,u,t,i
 set completeopt=menu
 
+let mapleader=","
+
 "-------------------------------------------------------------------[Layout]----
 set nonumber
 set laststatus=2
@@ -45,8 +47,8 @@ set splitright
 "set list
 "set pumheight=5
 
-colorscheme solarized
-set bg=light
+colorscheme molokai
+"set bg=light
 
 syn on
 
@@ -61,6 +63,7 @@ endfunction
 "--------------------------------------------------------------[Plugins]----
 let g:SuperTabSetDefaultCompletionType="context"
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'
+nmap <leader>tb :TagbarToggle<CR>
 
 "---------------------------------------------------------------[Search]----
 set hlsearch
