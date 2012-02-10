@@ -61,7 +61,6 @@ endfunction
 "--------------------------------------------------------------[Plugins]----
 let g:SuperTabSetDefaultCompletionType="context"
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'
-let g:tagbar_type_javascript={'ctagsbin' : '/usr/local/bin/jsctags'}
 
 "---------------------------------------------------------------[Search]----
 set hlsearch

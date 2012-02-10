@@ -4,6 +4,7 @@
 
 [core]
 	editor = mvim
+	excludesfile = /Users/jfaul/.gitignore_global
 
 [branch]
 	autosetuprebase = remote
