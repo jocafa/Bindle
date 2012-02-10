@@ -11,7 +11,7 @@ set encoding=utf8
 syntax on
 filetype plugin indent on
 
-set backspace=2
+set backspace=indent,eol,start
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -60,6 +60,8 @@ endfunction
 
 "--------------------------------------------------------------[Plugins]----
 let g:SuperTabSetDefaultCompletionType="context"
+let g:tagbar_ctags_bin='/usr/local/bin/ctags'
+let g:tagbar_type_javascript={'ctagsbin' : '/usr/local/bin/jsctags'}
 
 "---------------------------------------------------------------[Search]----
 set hlsearch
@@ -75,6 +77,8 @@ set scrolljump=5
 set sidescrolloff=10
 set sidescroll=1
 set wildmenu
+set showmatch
+set matchtime=2
 
 nnoremap <silent> <Tab> :wincmd w<CR>
 nnoremap <silent> <S-Tab> :wincmd W<CR>
@@ -129,12 +133,6 @@ endfunction
 autocmd BufNewFile,BufRead *.js set filetype=javascript
 autocmd FileType javascript set shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript set nocindent autoindent smartindent expandtab
-"autocmd FileType javascript set concealcursor=nvi
-"autocmd FileType javascript ab ƒ function
-"autocmd FileType javascript ab µ this
-autocmd FileType javascript command! -range=%
-			\ JsLint call JsLint(<line1>, <line2>)
-
 
 "---------------------------------------------------------[Coffeescript]----
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee

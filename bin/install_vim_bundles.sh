@@ -21,13 +21,15 @@ get_bundle jayferd eco.vim
 get_bundle jdevera vim-protobuf-syntax
 get_bundle kchmck vim-coffee-script
 get_bundle leshill vim-json
+get_bundle majutsushi tagbar
 get_bundle mattn zencoding-vim
-get_bundle mileszs ack.vim
+#get_bundle mileszs ack.vim
 get_bundle msanders snipmate.vim
-#get_bundle pangloss vim-javascript
+get_bundle pangloss vim-javascript
 get_bundle scrooloose nerdcommenter
 get_bundle scrooloose nerdtree
 get_bundle scrooloose snipmate-snippets
+get_bundle scrooloose syntastic
 get_bundle tpope vim-fugitive
 get_bundle tpope vim-git
 get_bundle tpope vim-haml
@@ -36,9 +38,9 @@ get_bundle tpope vim-rails
 get_bundle tpope vim-repeat
 get_bundle tpope vim-surround
 #get_bundle vim-scripts Command-T
-get_bundle vim-scripts Indent-Finder
+#get_bundle vim-scripts Indent-Finder
+get_bundle vim-scripts Align
 #get_bundle vim-scripts IndentAnything
-get_bundle vim-scripts JavaScript-Indent
 get_bundle wavded vim-stylus
 
 #colorschemes
