@@ -64,6 +64,8 @@ endfunction
 let g:SuperTabSetDefaultCompletionType="context"
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 nmap <leader>tb :TagbarToggle<CR>
+sign define SyntasticError text=✖
+sign define SyntasticWarning text=▲
 
 "---------------------------------------------------------------[Search]----
 set hlsearch
