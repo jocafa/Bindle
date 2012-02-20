@@ -27,7 +27,7 @@
 	ls = ls-remote .
 	pu = push
 	pom = push origin master
-	logp = log --prety='%h - %s'
+	logp = log --pretty='%h - %s'
 	unstage = reset HEAD --
 	softrm = rm --cached --
 	last = log -1 HEAD
