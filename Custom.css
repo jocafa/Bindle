@@ -1,0 +1,21 @@
+/* link to ~/Library/Application Support/Google/Chrome/Default/User Stylesheets/Custom.css */
+
+#-webkit-web-inspector {}
+
+#-webkit-web-inspector .monospace,
+#-webkit-web-inspector .source-code {
+	font-family: "ProFontX" !important;
+	font-size: 9px !important;
+}
+
+#-webkit-web-inspector #toolbar {
+	height: auto !important;
+}
+
+#-webkit-web-inspector #toolbar .toolbar-label {
+	display:  none;
+}
+
+#-webkit-web-inspector #main {
+	top: 39px !important;
+}
