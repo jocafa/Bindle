@@ -8,7 +8,14 @@
 }
 
 #-webkit-web-inspector #toolbar {
-	height: auto !important;
+	height: 32px !important;
+}
+
+#-webkit-web-inspector #toolbar .toolbar-icon {
+	width: 16px !important;
+	height: 16px !important;
+	background-size: 128px 32px;
+	margin-top: 4px;
 }
 
 #-webkit-web-inspector #toolbar .toolbar-label {
@@ -16,5 +23,5 @@
 }
 
 #-webkit-web-inspector #main {
-	top: 39px !important;
+	top: 32px !important;
 }
