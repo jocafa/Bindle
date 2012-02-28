@@ -8,3 +8,4 @@ loadkeymap
 ;t τ
 ;f ƒ
 ;k ϰ
+;P ϕ
