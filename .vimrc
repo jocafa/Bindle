@@ -1,8 +1,50 @@
-"---------------------------------------------------------------------[Init]----
-runtime! autoload/pathogen.vim
-if exists('g:loaded_pathogen')
-	call pathogen#runtime_prepend_subdirectories(expand('~/.vimbundles'))
-endif
+"-------------------------------------------------------------------[Vundle]----
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'danchoi/ruby_bashrockets.vim'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'duff/vim-bufonly'
+Bundle 'ervandew/supertab'
+Bundle 'jayferd/eco.vim'
+Bundle 'jdevera/vim-protobuf-syntax'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'leshill/vim-json'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'majutsushi/tagbar'
+Bundle 'mattn/zencoding-vim'
+Bundle 'msanders/snipmate.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/snipmate-snippets'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-scripts/Align'
+Bundle 'wavded/vim-stylus'
+
+"colorschemes
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tomasr/molokai'
+Bundle 'vim-scripts/TuttiColori-Colorscheme'
+Bundle 'vim-scripts/Warm-grey'
+Bundle 'vim-scripts/eclm_wombat.vim'
+Bundle 'vim-scripts/paintbox'
+Bundle 'vim-scripts/pyte'
+Bundle 'vim-scripts/rdark'
+Bundle 'vim-scripts/rdark-terminal'
+Bundle 'vim-scripts/silent.vim'
+Bundle 'vim-scripts/vanzan_color'
+
+filetype plugin indent on
 
 "------------------------------------------------------------------[General]----
 set secure "locks down the exrc setting
@@ -12,7 +54,6 @@ set nocompatible
 set encoding=utf8
 
 syntax on
-filetype plugin indent on
 
 set backspace=indent,eol,start
 set tabstop=2
@@ -64,12 +105,14 @@ endfunction
 "set statusline+=%{SyntaxItem()}
 
 "--------------------------------------------------------------[Plugins]----
+nmap <leader>tb :TagbarToggle<CR>
 let g:SuperTabSetDefaultCompletionType="context"
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'
-nmap <leader>tb :TagbarToggle<CR>
+nmap <leader>nt :NERDTreeToggle<CR>
 let g:syntastic_javascript_checker="jshint"
 silent! sign define SyntasticError text=!>
 silent! sign define SyntasticWarning text=W>
+let g:Powerline_symbols='fancy'
 
 "---------------------------------------------------------------[Search]----
 set hlsearch
