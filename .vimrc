@@ -4,6 +4,8 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'gmarik/vundle'
+
 Bundle 'danchoi/ruby_bashrockets.vim'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'duff/vim-bufonly'
