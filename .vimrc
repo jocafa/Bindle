@@ -17,6 +17,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'mattn/zencoding-vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'pangloss/vim-javascript'
+Bundle 'Rykka/ColorV'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/snipmate-snippets'
@@ -28,6 +29,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/Align'
 Bundle 'wavded/vim-stylus'
 
@@ -141,6 +143,7 @@ map H ^
 map L $
 
 map gf :e <cfile><CR>
+nnoremap <leader>/ :nohls<CR>
 
 "---------------------------------------------------------------[Keymap]----
 set keymap=jocafa
