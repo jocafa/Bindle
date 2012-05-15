@@ -6,6 +6,9 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'Rykka/ColorV'
+Bundle 'bkad/CamelCaseMotion'
 Bundle 'danchoi/ruby_bashrockets.vim'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'duff/vim-bufonly'
@@ -14,12 +17,11 @@ Bundle 'jayferd/eco.vim'
 Bundle 'jdevera/vim-protobuf-syntax'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'leshill/vim-json'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'majutsushi/tagbar'
 Bundle 'mattn/zencoding-vim'
+Bundle 'mileszs/ack.vim'
 Bundle 'msanders/snipmate.vim'
-"Bundle 'pangloss/vim-javascript'
-Bundle 'Rykka/ColorV'
+Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/snipmate-snippets'
@@ -34,6 +36,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/Align'
 Bundle 'wavded/vim-stylus'
+Bundle 'wincent/Command-T'
 
 "colorschemes
 Bundle 'altercation/vim-colors-solarized'
@@ -68,7 +71,7 @@ set softtabstop=4
 set shiftwidth=4
 set noexpandtab
 set autoindent
-set cinoptions=(s,m1,)200,j1,J1
+"set cinoptions=(s,m1,)200,j1,J1
 
 set vb
 set t_vb=""
@@ -112,7 +115,7 @@ endfunction
 "set statusline+=%{SyntaxItem()}
 
 "--------------------------------------------------------------[Plugins]----
-nmap <leader>tb :TagbarToggle<CR>
+nmap <leader>b :TagbarToggle<CR>
 let g:SuperTabSetDefaultCompletionType="context"
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 nmap <leader>nt :NERDTreeToggle<CR>
@@ -120,6 +123,7 @@ let g:syntastic_javascript_checker="jshint"
 silent! sign define SyntasticError text=!>
 silent! sign define SyntasticWarning text=W>
 let g:Powerline_symbols='fancy'
+let g:CommandTMaxHeight=20
 
 "---------------------------------------------------------------[Search]----
 set hlsearch
@@ -159,6 +163,10 @@ set keymap=jocafa
 
 "-----------------------------------------------------------------[HTML]----
 autocmd BufNewFile,BufRead *.htm,*.html set filetype=html.css.javascript
+
+"-----------------------------------------------------------[JavaScript]----
+"autocmd FileType javascript set nocindent
+
 
 "------------------------------------------------------------------[CSS]----
 autocmd BufNewFile,BufRead *.css,*.less set filetype=css
