@@ -25,7 +25,7 @@ ZSH_THEME="jreese"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew node npm vi-mode taskwarrior)
+plugins=(git brew node npm vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -39,3 +39,4 @@ source $HOME/.rvm/scripts/rvm
 alias jslint="jsl -conf ~/.jsl.conf -process"
 alias phantomjs="/Applications/phantomjs.app/Contents/MacOS/phantomjs"
 alias buspirate="screen /dev/tty.usbserial-A700ekMH 115200 8N1"
+alias plask="/Applications/PlaskLauncher.app/Contents/Resources/Plask.app/Contents/MacOS/Plask"
