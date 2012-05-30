@@ -66,10 +66,10 @@ set nowrap
 set nofoldenable
 
 set backspace=indent,eol,start
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set noexpandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
 set autoindent
 "set cinoptions=(s,m1,)200,j1,J1
 
@@ -166,7 +166,7 @@ autocmd BufNewFile,BufRead *.htm,*.html set filetype=html.css.javascript
 
 "-----------------------------------------------------------[JavaScript]----
 "autocmd FileType javascript set nocindent
-
+autocmd FileType javascript set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
 "------------------------------------------------------------------[CSS]----
 autocmd BufNewFile,BufRead *.css,*.less set filetype=css
