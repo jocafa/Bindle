@@ -1,0 +1,17 @@
+Homebrew Apps
+=============
+
+ack
+byobu
+class-dump
+fontforge
+mongodb
+phantomjs
+protobuf
+pv
+pwgen
+redis
+tig
+tmux
+tree
+wget
