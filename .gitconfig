@@ -3,14 +3,11 @@
 	email = josh.faul@gmail.com
 
 [core]
-	editor = mvim
-	excludesfile = /Users/jfaul/.gitignore_global
+	editor = vim
+	excludesfile = ~/.gitignore_global
 
 [branch]
 	autosetuprebase = remote
-
-[merge]
-	tool = opendiff
 
 [color]
 	ui = auto
