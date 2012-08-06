@@ -33,10 +33,10 @@ source $ZSH/oh-my-zsh.sh
 #export PATH=/Users/jfaul/Scripts:/usr/local/sbin:$PATH:/usr/local/CrossPack-AVR/bin
 export PATH=/Users/jfaul/Scripts:/usr/local/bin:/usr/local/sbin:$PATH
 export EDITOR=vim
-source $HOME/.rvm/scripts/rvm
 #export NODE_PATH=/usr/local/lib/node_modules
 
 alias jslint="jsl -conf ~/.jsl.conf -process"
 alias phantomjs="/Applications/phantomjs.app/Contents/MacOS/phantomjs"
 alias buspirate="screen /dev/tty.usbserial-A700ekMH 115200 8N1"
 alias plask="/Applications/PlaskLauncher.app/Contents/Resources/Plask.app/Contents/MacOS/Plask"
+alias sshuttle="/Users/jfaul/Source/sshuttle/sshuttle --dns -r jfaul@jocafa.com 0/0"
