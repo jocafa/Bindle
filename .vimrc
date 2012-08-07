@@ -50,7 +50,6 @@ set splitright
 "set pumheight=5
 
 colorscheme molokai
-"set bg=light
 
 syn on
 
