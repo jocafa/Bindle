@@ -113,7 +113,7 @@ autocmd BufNewFile,BufRead *.htm,*.html set filetype=html.css.javascript
 
 "-----------------------------------------------------------[JavaScript]----
 "autocmd FileType javascript set nocindent
-autocmd FileType javascript set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType javascript set tabstop=2 softtabstop=2 shiftwidth=2 expandtab formatoptions-=ro
 
 "------------------------------------------------------------------[CSS]----
 autocmd BufNewFile,BufRead *.css,*.less set filetype=css

@@ -31,7 +31,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 #export PATH=/Users/jfaul/Scripts:/usr/local/sbin:$PATH:/usr/local/CrossPack-AVR/bin
-export PATH=/Users/jfaul/Scripts:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/Scripts:/usr/local/bin:/usr/local/sbin:$PATH
 export EDITOR=vim
 #export NODE_PATH=/usr/local/lib/node_modules
 
