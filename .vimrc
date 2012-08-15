@@ -8,6 +8,8 @@ set exrc "enable cwd .vimrc files
 set nocompatible
 set encoding=utf8
 
+set clipboard+=unnamed
+
 syntax on
 
 set nowrap
@@ -89,8 +91,13 @@ set wildmenu
 set showmatch
 set matchtime=2
 
+" easier window navigation
 nnoremap <silent> <Tab> :wincmd w<CR>
 nnoremap <silent> <S-Tab> :wincmd W<CR>
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 map j gj
 map k gk

@@ -33,8 +33,9 @@ source $ZSH/oh-my-zsh.sh
 #export PATH=/Users/jfaul/Scripts:/usr/local/sbin:$PATH:/usr/local/CrossPack-AVR/bin
 export PATH=$HOME/Scripts:/usr/local/bin:/usr/local/sbin:$PATH
 export EDITOR=vim
-#export NODE_PATH=/usr/local/lib/node_modules
 
+alias vi="vim"
+alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias jslint="jsl -conf ~/.jsl.conf -process"
 alias phantomjs="/Applications/phantomjs.app/Contents/MacOS/phantomjs"
 alias buspirate="screen /dev/tty.usbserial-A700ekMH 115200 8N1"
