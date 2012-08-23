@@ -41,3 +41,5 @@ alias phantomjs="/Applications/phantomjs.app/Contents/MacOS/phantomjs"
 alias buspirate="screen /dev/tty.usbserial-A700ekMH 115200 8N1"
 alias plask="/Applications/PlaskLauncher.app/Contents/Resources/Plask.app/Contents/MacOS/Plask"
 alias sshuttle="/Users/jfaul/Source/sshuttle/sshuttle --dns -r jfaul@jocafa.com 0/0"
+
+export PB_CLIENT_TYPE=Zmq
