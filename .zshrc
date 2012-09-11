@@ -25,7 +25,7 @@ ZSH_THEME="jocafa"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew node npm vi-mode)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -34,12 +34,17 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$HOME/Scripts:/usr/local/bin:/usr/local/sbin:$PATH
 export EDITOR=vim
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
+
 alias vi="vim"
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias jslint="jsl -conf ~/.jsl.conf -process"
-alias phantomjs="/Applications/phantomjs.app/Contents/MacOS/phantomjs"
+#alias phantomjs="/Applications/phantomjs.app/Contents/MacOS/phantomjs"
 alias buspirate="screen /dev/tty.usbserial-A700ekMH 115200 8N1"
 alias plask="/Applications/PlaskLauncher.app/Contents/Resources/Plask.app/Contents/MacOS/Plask"
 alias sshuttle="/Users/jfaul/Source/sshuttle/sshuttle --dns -r jfaul@jocafa.com 0/0"
+alias servethis="python -m SimpleHTTPServer 8888"
 
 export PB_CLIENT_TYPE=Zmq
