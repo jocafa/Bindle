@@ -38,6 +38,8 @@ export EDITOR=vim
 
 export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 
+cdpath=(~ ~/work)
+
 alias vi="vim"
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias jslint="jsl -conf ~/.jsl.conf -process"
@@ -47,4 +49,8 @@ alias plask="/Applications/PlaskLauncher.app/Contents/Resources/Plask.app/Conten
 alias sshuttle="/Users/jfaul/Source/sshuttle/sshuttle --dns -r jfaul@jocafa.com 0/0"
 alias servethis="python -m SimpleHTTPServer 8888"
 
+alias bx="bundle exec"
+
 export PB_CLIENT_TYPE=Zmq
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
