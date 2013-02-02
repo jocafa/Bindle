@@ -54,3 +54,7 @@ alias bx="bundle exec"
 export PB_CLIENT_TYPE=Zmq
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+clsd () {
+  class-dump $1 | vim -R +"set ft=objc" -;
+}
