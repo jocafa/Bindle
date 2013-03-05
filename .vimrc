@@ -1,5 +1,5 @@
+"------------------------------------------------------------------[Vundle]----
 source ~/.vim/bundles.vim
-filetype plugin indent on
 
 "------------------------------------------------------------------[General]----
 set secure "locks down the exrc setting

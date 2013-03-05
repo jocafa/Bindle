@@ -50,3 +50,5 @@ Bundle 'vim-scripts/rdark'
 Bundle 'vim-scripts/rdark-terminal'
 Bundle 'vim-scripts/silent.vim'
 Bundle 'vim-scripts/vanzan_color'
+
+filetype plugin indent on
