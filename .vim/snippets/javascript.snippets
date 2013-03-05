@@ -1,0 +1,116 @@
+snippet amdbbmodel
+	define([], function () {
+		var `Filename()` = Backbone.Model.extend({
+			defaults: {
+			},
+
+			constructor: function `Filename()`() {
+				Backbone.Model.apply(this, arguments);
+			}
+		});
+
+		return `Filename()`;
+	});
+
+snippet amdbbcollection
+	define([], function () {
+		var `Filename()` = Backbone.Collection.extend({
+			model: ${1:Backbone.Model},
+
+			constructor: function `Filename()`() {
+				Backbone.Collection.apply(this, arguments);
+			}
+		});
+
+		return `Filename()`;
+	});
+
+snippet amdbbview
+	define([], function () {
+		var `Filename()` = Backbone.View.extend({
+			className: '`Filename()`',
+
+			options: {
+			},
+
+			events: {
+			},
+
+			constructor: function `Filename()`() {
+				Backbone.View.apply(this, arguments);
+			},
+
+			initialize: function () {
+			},
+
+			render: function () {
+			}
+		});
+
+		return `Filename()`;
+	});
+
+snippet ffview
+	define([], function () {
+		var `Filename()` = Backbone.View.extend({
+			// Configuration ----------------------------------------------------------
+			className: '`tolower(substitute(Filename(), '\(\U\)\(\u\)', '\1-\l\2', 'g'))`',
+
+			options: {
+			},
+
+			events: {
+			},
+
+			// Lifecycle --------------------------------------------------------------
+			constructor: function `Filename()`() {
+				this.onDataChange = _.debounce(this.onDataChange, 50);
+				Backbone.View.apply(this, arguments);
+			},
+
+			initialize: function () {
+				var that = this;
+
+				this.attach();
+
+				_.defer(function () {
+					that.layout();
+					that.interpretData();
+					that.render();
+				});
+			},
+
+			attach: function () {
+			},
+
+			detach: function () {
+			},
+
+			remove: function () {
+				this.detach();
+				Backbone.View.prototype.remove.apply(this, arguments);
+			},
+
+			// Layout and Rendering ---------------------------------------------------
+			layout: function () {
+			},
+
+			render: function () {
+			},
+
+			// Data Interpretation ----------------------------------------------------
+			interpretData: function () {
+			},
+
+			// Data Events ------------------------------------------------------------
+			onDataChange: function () {
+				this.interpretData();
+				this.render();
+			}
+
+			// UI Events --------------------------------------------------------------
+			// Helpers ----------------------------------------------------------------
+		});
+
+		return `Filename()`;
+	});
