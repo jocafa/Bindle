@@ -113,6 +113,7 @@ set keymap=jocafa
 
 "------------------------------------------------------------[Utilities]----
 func! FinishHeader(chr)
+  execute "normal! A "
   execute "normal! " . (80 - col("$")) . "A" . a:chr
 endfunc
 
