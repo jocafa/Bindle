@@ -6,6 +6,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'airblade/vim-gitgutter'
 "Bundle 'Rykka/colorv.vim'
 "Bundle 'bkad/CamelCaseMotion'
 "Bundle 'danchoi/ruby_bashrockets.vim'
