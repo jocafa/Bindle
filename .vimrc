@@ -73,6 +73,10 @@ silent! sign define SyntasticError text=!>
 silent! sign define SyntasticWarning text=W>
 let g:Powerline_symbols='fancy'
 let g:CommandTMaxHeight=20
+" vim-javascript
+let g:html_indent_inctags="html,body,head,tbody"
+let g:html_indent_script1="inc"
+let g:html_indent_style1="inc"
 
 "---------------------------------------------------------------[Search]----
 set hlsearch
@@ -125,7 +129,7 @@ nnoremap <leader>= :call FinishHeader("=")<CR>
 "---------------------------------------------------------------------------
 
 "-----------------------------------------------------------------[HTML]----
-autocmd BufNewFile,BufRead *.htm,*.html set filetype=html.css.javascript
+"autocmd BufNewFile,BufRead *.htm,*.html set filetype=html.css.javascript
 
 "-----------------------------------------------------------[JavaScript]----
 "autocmd FileType javascript set nocindent
