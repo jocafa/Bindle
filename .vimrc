@@ -10,8 +10,6 @@ set encoding=utf8
 
 set clipboard+=unnamed
 
-syntax on
-
 set nowrap
 set nofoldenable
 
@@ -23,24 +21,25 @@ set expandtab
 set autoindent
 "set cinoptions=(s,m1,)200,j1,J1
 
+"Use visual bell, but an empty string for it - display nothing
 set vb
 set t_vb=""
 
-set backup
+set backup "make a backup before deleting a file
 set swapfile
 set backupdir=/tmp
-set directory=/tmp
+set directory=/tmp "keep swap files out of cwd
 
-set lazyredraw
+set lazyredraw "don't redraw while executing things
 
 set complete=.,w,k,b,u,t,i
-set completeopt=menu
+set completeopt=menu "show popup for completions
 
 let mapleader=","
 
 "-------------------------------------------------------------------[Layout]----
-set nonumber
-set laststatus=2
+set nonumber "turn off line numbering
+set laststatus=2 "always show a status line on the last window
 "set ruler
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set listchars=tab:▶━,trail:⌴,extends:▶,precedes:◀
@@ -53,9 +52,9 @@ set splitright
 
 colorscheme molokai
 
-syn on
+syntax on
 
-silent! set colorcolumn=80
+silent! set colorcolumn=80 "highlight 80th column
 
 function! SyntaxItem()
 	return synIDattr(synID(line("."),col("."),1),"name")
@@ -79,21 +78,21 @@ let g:html_indent_script1="inc"
 let g:html_indent_style1="inc"
 
 "---------------------------------------------------------------[Search]----
-set hlsearch
-set incsearch
-set smartcase
-set ignorecase
+set hlsearch "highlight previous search matches
+set incsearch "highlight search matches while typing
+set smartcase "case sensitive search when uppercase present
+set ignorecase "case insensitive search by default
 
 "-----------------------------------------------------------[Navigation]----
-set mouse=a
-set hidden
+set mouse=a "enable mouse for all modes
+set hidden "allow unwritten buffers to be hidden
 set scrolloff=5
 set scrolljump=5
 set sidescrolloff=10
 set sidescroll=1
 set wildmenu
-set showmatch
-set matchtime=2
+set showmatch "highlight matching bracket when inserting a new one
+set matchtime=2 "how long to show matching bracket in .1s
 
 " easier window navigation
 nnoremap <silent> <Tab> :wincmd w<CR>
@@ -103,6 +102,7 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+"screenwise character movement
 map j gj
 map k gk
 
