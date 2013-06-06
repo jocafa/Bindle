@@ -158,7 +158,7 @@ autocmd BufNewFile,BufRead *.md,*.mkd,*.markdown set filetype=markdown
 autocmd FileType markdown set wrap linebreak
 
 "---------------------------------------------------------[ Processing ]----
-autocmd BufNewFile,BufRead *.pde set filetype=java
+"autocmd BufNewFile,BufRead *.pde set filetype=java
 
 "-----------------------------------------------------------[ Protobuf ]----
 autocmd BufNewFile,BufRead *.proto set filetype=proto
