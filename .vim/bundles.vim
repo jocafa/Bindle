@@ -36,6 +36,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/Align'
 "Bundle 'vim-scripts/actionscript.vim'
+Bundle 'vim-scripts/openscad.vim'
 Bundle 'wavded/vim-stylus'
 Bundle 'wincent/Command-T'
 
