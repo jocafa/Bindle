@@ -48,6 +48,7 @@ alias buspirate="screen /dev/tty.usbserial-A700ekMH 115200 8N1"
 alias plask="/Applications/PlaskLauncher.app/Contents/Resources/Plask.app/Contents/MacOS/Plask"
 alias sshuttle="/Users/jfaul/Source/sshuttle/sshuttle --dns -r jfaul@jocafa.com 0/0"
 alias servethis="python -m SimpleHTTPServer 8888"
+alias blender="/Applications/Blender/blender.app/Contents/MacOS/blender"
 
 alias bx="bundle exec"
 
