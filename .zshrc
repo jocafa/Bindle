@@ -49,6 +49,7 @@ alias plask="/Applications/PlaskLauncher.app/Contents/Resources/Plask.app/Conten
 alias sshuttle="/Users/jfaul/Source/sshuttle/sshuttle --dns -r jfaul@jocafa.com 0/0"
 alias servethis="python -m SimpleHTTPServer 8888"
 alias blender="/Applications/Blender/blender.app/Contents/MacOS/blender"
+alias openscad="/Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD"
 
 alias bx="bundle exec"
 
