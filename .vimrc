@@ -139,6 +139,9 @@ autocmd FileType javascript set tabstop=2 softtabstop=2 shiftwidth=2 expandtab f
 autocmd BufNewFile,BufRead *.css,*.less set filetype=css
 
 
+"-----------------------------------------------------------------[GLSL]----
+autocmd BufNewFile,BufRead *.vert,*.frag set filetype=glsl
+
 "-----------------------------------------------------------------[HAML]----
 autocmd BufNewFile,BufRead *.haml set filetype=haml
 autocmd FileType haml set makeprg=haml\ %:p\ %:p:s?haml?html?
