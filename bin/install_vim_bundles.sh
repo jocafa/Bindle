@@ -1,3 +1,3 @@
 mkdir -p ~/.vim/bundle
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-vim -u ~/.vim/bundles.vim +BundleInstall +qall
+git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+vim -u ~/.vim/bundles.vim +NeoBundleInstall +qall

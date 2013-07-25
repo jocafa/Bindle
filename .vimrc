@@ -64,18 +64,38 @@ endfunction
 
 "--------------------------------------------------------------[Plugins]----
 nmap <leader>b :TagbarToggle<CR>
-let g:SuperTabSetDefaultCompletionType="context"
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 nmap <leader>nt :NERDTreeToggle<CR>
 let g:syntastic_javascript_checker="jshint"
 silent! sign define SyntasticError text=!>
 silent! sign define SyntasticWarning text=W>
-let g:Powerline_symbols='fancy'
-let g:CommandTMaxHeight=20
+
 " vim-javascript
 let g:html_indent_inctags="html,body,head,tbody"
 let g:html_indent_script1="inc"
 let g:html_indent_style1="inc"
+
+" airline
+let g:airline_theme='solarized'
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_fugitive_prefix = '⭠'
+let g:airline_readonly_symbol = '⭤'
+let g:airline_linecolumn_prefix = '⭡'
+
+" unite
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <leader>f :<C-u>Unite -start-insert file_rec/async<CR>
+autocmd FileType unite call s:unite_settings()
+function! s:unite_settings()
+  imap <buffer> <C-j> <Plug>(unite_select_next_line)
+  imap <buffer> <C-j> <Plug>(unite_select_previous_line)
+endfunction
+
+" YCM
+let g:ycm_filetype_blacklist={'unite': 1}
 
 "---------------------------------------------------------------[Search]----
 set hlsearch "highlight previous search matches
@@ -138,6 +158,10 @@ autocmd FileType javascript set tabstop=2 softtabstop=2 shiftwidth=2 expandtab f
 "------------------------------------------------------------------[CSS]----
 autocmd BufNewFile,BufRead *.css,*.less set filetype=css
 
+
+"----------------------------------------------------------------[C/C++]----
+autocmd BufNewFile,BufRead *.ino set filetype=cpp
+autocmd FileType cpp set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab formatoptions-=ro
 
 "-----------------------------------------------------------------[GLSL]----
 autocmd BufNewFile,BufRead *.vert,*.frag set filetype=glsl

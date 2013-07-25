@@ -1,57 +1,61 @@
 set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
 
-Bundle 'gmarik/vundle'
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'airblade/vim-gitgutter'
-"Bundle 'Rykka/colorv.vim'
-"Bundle 'bkad/CamelCaseMotion'
-"Bundle 'danchoi/ruby_bashrockets.vim'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'duff/vim-bufonly'
-Bundle 'ervandew/supertab'
-Bundle 'jdevera/vim-protobuf-syntax'
-Bundle 'kchmck/vim-coffee-script'
-"Bundle 'leafgarland/typescript-vim'
-Bundle 'leshill/vim-json'
-Bundle 'majutsushi/tagbar'
-Bundle 'mattn/zencoding-vim'
-"Bundle 'mileszs/ack.vim'
-Bundle 'msanders/snipmate.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/snipmate-snippets'
-"Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'vim-scripts/Align'
-"Bundle 'vim-scripts/actionscript.vim'
-Bundle 'vim-scripts/glsl.vim'
-Bundle 'vim-scripts/openscad.vim'
-Bundle 'wavded/vim-stylus'
-Bundle 'wincent/Command-T'
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'Shougo/vimproc', {
+      \ 'build': {
+      \   'mac': 'make -f make_mac.mak',
+      \   'unix': 'make -f make_unix.mak'
+      \ }
+      \}
+
+NeoBundle 'Valloric/YouCompleteMe', {
+      \ 'build': {
+      \   'mac': './install.sh'
+      \ }
+      \}
+
+NeoBundle 'Shougo/unite.vim'
+
+NeoBundle 'bling/vim-airline'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'jdevera/vim-protobuf-syntax'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'leshill/vim-json'
+NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'msanders/snipmate.vim'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/snipmate-snippets'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-git'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'vim-scripts/Align'
+NeoBundle 'vim-scripts/openscad.vim'
+NeoBundle 'wavded/vim-stylus'
 
 "colorschemes
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tomasr/molokai'
-Bundle 'vim-scripts/TuttiColori-Colorscheme'
-Bundle 'vim-scripts/Warm-grey'
-Bundle 'vim-scripts/eclm_wombat.vim'
-Bundle 'vim-scripts/paintbox'
-Bundle 'vim-scripts/pyte'
-Bundle 'vim-scripts/rdark'
-Bundle 'vim-scripts/rdark-terminal'
-Bundle 'vim-scripts/silent.vim'
-Bundle 'vim-scripts/vanzan_color'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'tomasr/molokai'
+NeoBundle 'vim-scripts/TuttiColori-Colorscheme'
+NeoBundle 'vim-scripts/Warm-grey'
+NeoBundle 'vim-scripts/eclm_wombat.vim'
+NeoBundle 'vim-scripts/paintbox'
+NeoBundle 'vim-scripts/pyte'
+NeoBundle 'vim-scripts/rdark'
+NeoBundle 'vim-scripts/rdark-terminal'
+NeoBundle 'vim-scripts/silent.vim'
+NeoBundle 'vim-scripts/vanzan_color'
 
 filetype plugin indent on
+NeoBundleCheck
