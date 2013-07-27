@@ -41,6 +41,7 @@ NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-scripts/Align'
+NeoBundle 'vim-scripts/glsl.vim'
 NeoBundle 'vim-scripts/openscad.vim'
 NeoBundle 'wavded/vim-stylus'
 

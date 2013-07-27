@@ -164,7 +164,7 @@ autocmd BufNewFile,BufRead *.ino set filetype=cpp
 autocmd FileType cpp set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab formatoptions-=ro
 
 "-----------------------------------------------------------------[GLSL]----
-autocmd BufNewFile,BufRead *.vert,*.frag set filetype=glsl
+autocmd BufNewFile,BufRead *.glsl,*.vert,*.frag set filetype=glsl
 
 "-----------------------------------------------------------------[HAML]----
 autocmd BufNewFile,BufRead *.haml set filetype=haml
