@@ -182,7 +182,7 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 "-------------------------------------------------------------[Markdown]----
 autocmd BufNewFile,BufRead *.md,*.mkd,*.markdown set filetype=markdown
-autocmd FileType markdown set wrap linebreak
+autocmd FileType markdown set wrap linebreak spell
 
 "---------------------------------------------------------[ Processing ]----
 "autocmd BufNewFile,BufRead *.pde set filetype=java
