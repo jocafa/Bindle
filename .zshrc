@@ -38,8 +38,6 @@ export EDITOR=vim
 
 export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 
-cdpath=(~ ~/work)
-
 alias vi="vim"
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias jslint="jsl -conf ~/.jsl.conf -process"
@@ -48,17 +46,42 @@ alias buspirate="screen /dev/tty.usbserial-A700ekMH 115200 8N1"
 alias plask="/Applications/PlaskLauncher.app/Contents/Resources/Plask.app/Contents/MacOS/Plask"
 alias sshuttle="/Users/jfaul/Source/sshuttle/sshuttle --dns -r jfaul@jocafa.com 0/0"
 alias servethis="python -m SimpleHTTPServer 8888"
-alias slic3r="/Applications/Slic3r.app/Contents/MacOS/slic3r"
-alias blender="/Applications/Blender/blender.app/Contents/MacOS/blender"
-alias openscad="/Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD"
-alias pronterface="VERSIONER_PYTHON_PREFER_32_BIT=yes /Users/jfaul/Source/Printrun/pronterface.py"
-
-alias bx="bundle exec"
-
-export PB_CLIENT_TYPE=Zmq
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 clsd () {
   class-dump $1 | vim -R +"set ft=objc" -;
 }
+
+cdpath=(~ ~/Work ~/Work/ntp)
+
+### OC Tanner Stuff
+export JAVA_HOME=/Library/Java/Home
+export ANT_HOME=/usr/bin/ant
+export ANT_OPTS=-Xmx1g
+export MAVEN_HOME='/usr/local/'
+export MAVEN_OPTS='-Xmx512m -XX:MaxPermSize=384m'
+export JBOSS_HOME=/Users/josh.faul/Work/ntp/jboss
+
+### Java Maven Build Scripts
+alias "aci"='ant clean install-artifacts'
+alias "mvndev"='mvn -U -Plocal -DdbEnv=dev clean package jboss:hard-deploy'
+alias "mvnqa"='mvn -U -Plocal -DdbEnv=qa -DskipTests clean package jboss:hard-deploy'
+
+alias "int"='cd ~/Work/ntp/perfint/'
+alias "ext"='cd ~/Work/ntp/perfext/'
+alias "com"='cd ~/Work/ntp/perfcommon/'
+alias "jbo"='cd ~/Work/ntp/jboss/bin/ && ./jboss_clear.sh'
+alias "extl"='cd ~/Work/ntp/perfext/src/main/webapp/'
+
+### Spiderman Scripts
+alias "spiderman"='cd ~/Work/ntp/spiderman/'
+alias "batm"='cd ~/Work/ntp/batman/'
+
+export HISTCONTROL=ignoreboth:erasedups
+export HISTTIMEFORMAT='%F %T '
+export HISTIGNORE="pwd:history"
+export PROMPT_COMMAND='history -a;'
+# resize history size
+export HISTSIZE=10000
+
