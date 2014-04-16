@@ -1,4 +1,4 @@
 {
-	"es5": true,
+  "curly": true,
 	"expr": true
 }

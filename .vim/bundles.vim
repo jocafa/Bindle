@@ -15,32 +15,43 @@ NeoBundle 'Shougo/vimproc', {
       \ }
       \}
 
-NeoBundle 'Valloric/YouCompleteMe', {
-      \ 'build': {
-      \   'mac': './install.sh'
-      \ }
-      \}
+"NeoBundle 'Valloric/YouCompleteMe', {
+      "\ 'build': {
+      "\   'mac': './install.sh'
+      "\ }
+      "\}
 
 NeoBundle 'Shougo/unite.vim'
 
+" Tab Completion and Snippets
+NeoBundle 'ervandew/supertab'
+NeoBundle 'marcweber/vim-addon-mw-utils'
+NeoBundle 'tomtom/tlib_vim'
+NeoBundle 'garbas/vim-snipmate'
+NeoBundle 'scrooloose/snipmate-snippets'
+NeoBundle 'mattn/emmet-vim'
+
+" UI
 NeoBundle 'bling/vim-airline'
 NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'jdevera/vim-protobuf-syntax'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'leshill/vim-json'
-NeoBundle 'mattn/zencoding-vim'
-NeoBundle 'msanders/snipmate.vim'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'scrooloose/snipmate-snippets'
+
+" Utilities
+NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-git'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'vim-scripts/Align'
+
+" Syntaxes
+NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'jdevera/vim-protobuf-syntax'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'leshill/vim-json'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-markdown'
 NeoBundle 'vim-scripts/glsl.vim'
 NeoBundle 'vim-scripts/openscad.vim'
 NeoBundle 'wavded/vim-stylus'

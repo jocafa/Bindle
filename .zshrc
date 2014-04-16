@@ -47,6 +47,9 @@ alias plask="/Applications/PlaskLauncher.app/Contents/Resources/Plask.app/Conten
 alias sshuttle="/Users/jfaul/Source/sshuttle/sshuttle --dns -r jfaul@jocafa.com 0/0"
 alias servethis="python -m SimpleHTTPServer 8888"
 
+alias ipen0="ifconfig en0 | grep 'inet ' | cut -d ' ' -f 2"
+alias ipen1="ifconfig en1 | grep 'inet ' | cut -d ' ' -f 2"
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 clsd () {
@@ -85,3 +88,6 @@ export PROMPT_COMMAND='history -a;'
 # resize history size
 export HISTSIZE=10000
 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

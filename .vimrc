@@ -8,7 +8,7 @@ set exrc "enable cwd .vimrc files
 set nocompatible
 set encoding=utf8
 
-set clipboard+=unnamed
+"set clipboard+=unnamed
 
 set nowrap
 set nofoldenable
@@ -78,6 +78,7 @@ let g:html_indent_style1="inc"
 " airline
 let g:airline_theme='murmur'
 let g:airline_powerline_fonts=1
+let g:airline#extensions#whitespace#enabled=0
 "let g:airline_left_sep = '⮀'
 "let g:airline_left_alt_sep = '⮁'
 "let g:airline_right_sep = '⮂'
@@ -96,7 +97,7 @@ function! s:unite_settings()
 endfunction
 
 " YCM
-let g:ycm_filetype_blacklist={'unite': 1}
+"let g:ycm_filetype_blacklist={'unite': 1}
 
 "---------------------------------------------------------------[Search]----
 set hlsearch "highlight previous search matches
@@ -145,6 +146,14 @@ endfunc
 nnoremap <leader>- :call FinishHeader("-")<CR>
 nnoremap <leader>= :call FinishHeader("=")<CR>
 
+
+function! <SID>StripTrailingWhitespace()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  call cursor(l, c)
+endfun
+
 "---------------------------------------------------------------------------
 "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%[File Types]%%%%
 "---------------------------------------------------------------------------
@@ -154,7 +163,7 @@ nnoremap <leader>= :call FinishHeader("=")<CR>
 
 "-----------------------------------------------------------[JavaScript]----
 "autocmd FileType javascript set nocindent
-autocmd FileType javascript set tabstop=2 softtabstop=2 shiftwidth=2 expandtab formatoptions-=ro
+autocmd FileType javascript set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
 "------------------------------------------------------------------[CSS]----
 autocmd BufNewFile,BufRead *.css,*.less set filetype=css
@@ -162,7 +171,7 @@ autocmd BufNewFile,BufRead *.css,*.less set filetype=css
 
 "----------------------------------------------------------------[C/C++]----
 autocmd BufNewFile,BufRead *.ino set filetype=cpp
-autocmd FileType cpp set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab formatoptions-=ro
+autocmd FileType cpp set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab
 
 "-----------------------------------------------------------------[GLSL]----
 autocmd BufNewFile,BufRead *.glsl,*.vert,*.frag set filetype=glsl
@@ -190,3 +199,6 @@ autocmd FileType markdown set wrap linebreak spell
 
 "-----------------------------------------------------------[ Protobuf ]----
 autocmd BufNewFile,BufRead *.proto set filetype=proto
+
+"-------------------------------------------------------------[ SQLite ]----
+autocmd BufNewFile,BufRead *.sqlite set filetype=sql
