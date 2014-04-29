@@ -7,8 +7,8 @@ set guifont=Ubuntu\ Mono\ derivative\ Powerline:h14.00
 "set guifont=Monaco:h10.00
 "set guifont=Menlo\ Regular\ for\ Powerline:h9.00
 "colors jolokai
-set background=light
-colors solarized
+set background=dark
+colors molokai
 set transparency=0
 set antialias
 set cursorline
