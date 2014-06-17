@@ -74,7 +74,7 @@ silent! sign define SyntasticWarning text=W>
 let g:html_indent_inctags="html,body,head,tbody"
 let g:html_indent_script1="inc"
 let g:html_indent_style1="inc"
-let g:javascript_conceal=1
+let g:javascript_conceal=0
 
 " airline
 let g:airline_theme='murmur'
@@ -181,9 +181,12 @@ autocmd BufNewFile,BufRead *.glsl,*.vert,*.frag set filetype=glsl
 autocmd BufNewFile,BufRead *.haml set filetype=haml
 autocmd FileType haml set makeprg=haml\ %:p\ %:p:s?haml?html?
 
+"------------------------------------------------------------------[KML]----
+autocmd BufNewFile,BufRead *.kml set filetype=xml
+
 "-----------------------------------------------------------------[Ruby]----
 "make -> ruby -c
-autocmd BufNewFile,BufRead *.rb,*.rbw,*.gem,*.gemspec,[rR]akefile,*.rake,*.thor set filetype=ruby
+autocmd BufNewFile,BufRead *.rb,*.rbw,*.gem,*.gemspec,[rR]akefile,Guardfile,*.rake,*.thor set filetype=ruby
 
 
 "---------------------------------------------------------------[Python]----

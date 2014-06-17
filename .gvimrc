@@ -1,5 +1,5 @@
 set guioptions=ae
-set clipboard+=unnamed
+"set clipboard+=unnamed
 "set guifont=ProFontWindows:h12.00
 "set guifont=ProFontX:h9.00
 "set guifont=Sauce\ Code\ Powerline:h12
