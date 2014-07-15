@@ -77,16 +77,23 @@ let g:html_indent_style1="inc"
 let g:javascript_conceal=0
 
 " airline
-let g:airline_theme='murmur'
-let g:airline_powerline_fonts=1
-let g:airline#extensions#whitespace#enabled=0
-"let g:airline_left_sep = '⮀'
-"let g:airline_left_alt_sep = '⮁'
-"let g:airline_right_sep = '⮂'
-"let g:airline_right_alt_sep = '⮃'
-"let g:airline_fugitive_prefix = '⭠'
-"let g:airline_readonly_symbol = '⭤'
-"let g:airline_linecolumn_prefix = '⭡'
+let g:airline_theme='powerlineish'
+"let g:airline_powerline_fonts=0
+let g:airline#extensions#branch#displayed_head_limit=10
+let g:airline#extensions#hunks#enabled=0
+let g:airline#extensions#whitespace#enabled=1
+let g:airline#extensions#whitespace#show_message=0
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.whitespace = 'Ξ'
 
 " unite
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
@@ -180,6 +187,10 @@ autocmd BufNewFile,BufRead *.glsl,*.vert,*.frag set filetype=glsl
 "-----------------------------------------------------------------[HAML]----
 autocmd BufNewFile,BufRead *.haml set filetype=haml
 autocmd FileType haml set makeprg=haml\ %:p\ %:p:s?haml?html?
+
+"-----------------------------------------------------------------[HTTP]----
+autocmd BufNewFile,BufRead *.http set filetype=http
+autocmd FileType http set ff=dos
 
 "------------------------------------------------------------------[KML]----
 autocmd BufNewFile,BufRead *.kml set filetype=xml
